@@ -1,0 +1,164 @@
+:root {
+    /* Primary Colors */
+    --color-soft-blue: hsl(215, 51%, 70%);
+    /* Metinler için (Blue 500) */
+    --color-cyan: hsl(178, 100%, 50%);
+    /* Hover durumları ve fiyat için (Cyan 400) */
+
+    /* Neutral Colors */
+    --color-main-bg: hsl(217, 54%, 11%);
+    /* Sayfa arka planı (Blue 950) */
+    --color-card-bg: hsl(216, 50%, 16%);
+    /* Kart arka planı (Blue 900) */
+    --color-line: hsl(215, 32%, 27%);
+    /* Ayırıcı çizgi rengi (Blue 800) */
+    --color-white: hsl(0, 0%, 100%);
+    /* Başlıklar ve isimler için */
+
+    /* Typography */
+    --font-main: 'Outfit', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-main-bg);
+    color: var(--color-white);
+    font-family: var(--font-main);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 14px;
+    max-width: 350px;
+    width: 100%;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.content-title {
+    font-size: 22px;
+    margin-block: 20px;
+    font-weight: var(--fw-bold);
+}
+
+.content-text {
+    color: var(--color-soft-blue);
+    font-weight: var(--fw-light);
+}
+
+.content-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content-eth {
+    display: flex;
+    gap: 8px;
+}
+
+.ethereum-text {
+    color: var(--color-cyan);
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+}
+
+.ethereum-time {
+    display: flex;
+    gap: 8px;
+}
+
+.time-text {
+    color: var(--color-soft-blue);
+    font-weight: var(--fw-light);
+    font-size: 18px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-line);
+    margin-top: 30px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-block: 20px;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+}
+
+.creation {
+    color: var(--color-soft-blue);
+    font-weight: var(--fw-light);
+}
+
+.name:hover {
+    color: var(--color-cyan);
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 15px;
+    }
+
+    .time-text {
+        font-size: 14px;
+    }
+
+    .ethereum-text {
+        font-size: 14px;
+    }
+
+    .content-title {
+        font-size: 22px;
+        margin-block: 10px;
+    }
+
+    .author {
+        font-size: 14px;
+    }
+
+    .author-img {
+        width: 30px;
+        height: 30px;
+    }
+}
